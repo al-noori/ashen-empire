@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="350.0" type="HBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.FleetDetailsListEntryComponent">
+    <ImageView fx:id="tankImg" fitHeight="50.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../fleet/divisionicon.png" />
+        <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </HBox.margin>
+    </ImageView>
+    <Region prefHeight="200.0" prefWidth="200.0" />
+    <HBox HBox.hgrow="ALWAYS">
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <Text fx:id="shipName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="NAME">
+                <font>
+                    <Font size="11.0" />
+                </font>
+            </Text>
+            <HBox>
+                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/speed_icon.png" />
+                </ImageView>
+                <Text fx:id="speed" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" text="SPEED: ">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                </Text>
+            </HBox>
+            <HBox>
+                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/fire.201x256.png" />
+                </ImageView>
+                <Text fx:id="atk" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" text="MAX ATK: ">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                </Text>
+            </HBox>
+            <HBox>
+                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/shield_icon.png" />
+                </ImageView>
+                <Text fx:id="def" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText" text="MAX DEF: ">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                </Text>
+            </HBox>
+        </VBox>
+        <Region prefHeight="200.0" prefWidth="200.0" />
+        <VBox alignment="CENTER" spacing="5.0">
+            <Button fx:id="openTransferButton" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#transfer" prefHeight="20.0" prefWidth="20.0" styleClass="verySmallButton">
+                <font>
+                    <Font size="7.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/transfer_icon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#showTankDetails" prefHeight="20.0" prefWidth="20.0" styleClass="verySmallButton">
+                <font>
+                    <Font size="7.0" />
+                </font>
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../icons/tankdetails_icon.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </VBox>
+        <VBox alignment="CENTER" spacing="5.0">
+            <Button fx:id="plusButton" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#plus" prefHeight="20.0" prefWidth="20.0" styleClass="verySmallButton" text="+">
+                <font>
+                    <Font size="8.0" />
+                </font>
+            </Button>
+            <Button fx:id="minusButton" maxHeight="20.0" maxWidth="20.0" minHeight="20.0" minWidth="20.0" mnemonicParsing="false" onAction="#minus" prefHeight="20.0" prefWidth="20.0" styleClass="verySmallButton" text="-">
+            <font>
+               <Font size="10.0" />
+            </font>
+            </Button>
+            <HBox.margin>
+                <Insets left="5.0" />
+            </HBox.margin>
+        </VBox>
+    </HBox>
+</fx:root>

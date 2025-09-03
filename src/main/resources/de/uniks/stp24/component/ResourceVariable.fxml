@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<fx:root alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" type="VBox"
+         fx:controller="de.uniks.stp24.component.ResourceVariableComponent" styleClass="tooltip-round">
+   <Label fx:id="typeLabel" styleClass="yellow-text-small">
+      <font>
+         <Font size="15.0"/>
+      </font>
+   </Label>
+   <HBox alignment="CENTER">
+      <ImageView fx:id="resourceImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true"/>
+      <Label fx:id="initialValueLabel" styleClass="yellow-text-small">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+   </HBox>
+   <VBox fx:id="effectsBox"/>
+   <HBox alignment="CENTER">
+      <Label styleClass="yellow-text-small" text="Total: "/>
+      <Label fx:id="finalValueLabel" styleClass="yellow-text-small">
+         <font>
+            <Font size="15.0"/>
+         </font>
+      </Label>
+   </HBox>
+</fx:root>

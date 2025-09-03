@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root alignment="TOP_CENTER" styleClass="Fraction-details-container" type="VBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.BuildingInformationComponent">
+   <HBox prefHeight="42.0" prefWidth="150.0">
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="40.0" styleClass="green-border">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <ImageView fx:id="buildingImage" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </ImageView>
+      </HBox>
+      <Label alignment="BOTTOM_LEFT" prefHeight="69.0" prefWidth="150.0" styleClass="yellow-text-small" text="%building" />
+   </HBox>
+   <Label fx:id="buildingNameLabel" alignment="CENTER" prefHeight="33.0" prefWidth="150.0" styleClass="yellow-text-small" text="XXXX" />
+   <Label fx:id="resourceLabel" alignment="CENTER" prefHeight="0.0" prefWidth="150.0" styleClass="yellow-text-small" text="%cost" />
+   <ListView fx:id="resourceListView" cacheShape="false" centerShape="false" focusTraversable="false" maxHeight="-Infinity" prefHeight="120.0" prefWidth="150.0" scaleShape="false">
+      <styleClass>
+         <String fx:value="Fraction-details-list-view" />
+         <String fx:value="Fraction-details-container2" />
+      </styleClass>
+   </ListView>
+</fx:root>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root alignment="CENTER" type="VBox" VBox.vgrow="ALWAYS" styleClass="systemListView" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.JobsListComponent">
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%jobList.name" styleClass="mediumText" />
+    <ListView fx:id="jobsList" onMouseClicked="#onItemClicked" styleClass="systemListView" VBox.vgrow="ALWAYS" />
+</fx:root>

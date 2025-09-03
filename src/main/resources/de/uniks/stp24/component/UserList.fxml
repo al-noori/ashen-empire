@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root alignment="CENTER" prefHeight="33.0" prefWidth="553.0" spacing="15.0" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.UserListComponent">
+   <Text fx:id="userText" styleClass="mediumText" textAlignment="CENTER" wrappingWidth="297.3334197998047" />
+   <VBox prefHeight="33.0" prefWidth="230.0" styleClass="fullOpacityContainer">
+      <ComboBox fx:id="comboBox" accessibleRole="BUTTON" prefHeight="30.0" prefWidth="245.0" promptText="not ready"
+                visibleRowCount="2">
+         <styleClass>
+            <String fx:value="yellowContainerLowOpacity"/>
+            <String fx:value="smallText"/>
+         </styleClass>
+      </ComboBox>
+   </VBox>
+</fx:root>

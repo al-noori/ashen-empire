@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root alignment="CENTER" styleClass="PopUpsBackground" type="VBox" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.EmpireListsComponent">
+    <ListView fx:id="empireLists" onMouseClicked="#onItemClicked" minWidth="820.0" styleClass="details-list-view" VBox.vgrow="ALWAYS" />
+</fx:root>

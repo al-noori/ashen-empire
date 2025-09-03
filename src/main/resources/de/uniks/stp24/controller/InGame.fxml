@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import de.uniks.stp24.component.MapComponent?>
+<?import de.uniks.stp24.component.NotificationsComponent?>
+
+<?import javafx.geometry.Insets?>
+<StackPane fx:id="stackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0"
+           prefWidth="1200.0" styleClass="inGame" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="de.uniks.stp24.controller.InGameController">
+    <AnchorPane fx:id="anchorPane">
+        <MapComponent AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0"/>
+        <BorderPane fx:id="overlay" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" pickOnBounds="false" prefHeight="331.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <left>
+                <VBox alignment="BOTTOM_RIGHT">
+                    <NotificationsComponent translateX="30.0" translateY="60.0"/>
+                </VBox>
+            </left>
+            <top>
+            </top>
+            <right>
+                <VBox pickOnBounds="false" spacing="10.0" BorderPane.alignment="CENTER">
+                    <VBox spacing="5.0" prefHeight="600" styleClass="fleetDetails">
+                        <padding>
+                            <Insets top="5" right="5" bottom="5" left="5"/>
+                        </padding>
+                        <HBox fx:id="fractionsListBox"/>
+                        <HBox fx:id="jobsListBox"/>
+                    </VBox>
+                    <HBox fx:id="fleetListBox"/>
+                </VBox>
+            </right>
+            <top>
+                <VBox alignment="CENTER_LEFT" pickOnBounds="false">
+                    <HBox pickOnBounds="false">
+                        <HBox fx:id="resourcesBox" pickOnBounds="false"/>
+                        <Region pickOnBounds="false" HBox.hgrow="ALWAYS"/>
+                        <HBox alignment="BOTTOM_CENTER" maxWidth="100" maxHeight="50" styleClass="PopUpsBackground">
+                            <Button fx:id="pauseButton" mnemonicParsing="false" onMouseClicked="#pauseButton"
+                                    styleClass="primary-button"
+                                    text="%pause"
+                                    BorderPane.alignment="CENTER"/>
+                        </HBox>
+                    </HBox>
+                    <VBox alignment="CENTER_LEFT" pickOnBounds="false" maxWidth="250" spacing="5">
+                        <Button fx:id="marketButton" mnemonicParsing="false" onMouseClicked="#marketButton" text="Market"
+                                styleClass="flagButton" alignment="CENTER_LEFT" minWidth="200"/>
+                        <Button fx:id="technologiesButton" mnemonicParsing="false" alignment="CENTER_LEFT" onMouseClicked="#onTechnologiesButtonClicked"
+                                text="%technologies" styleClass="flagButton" minWidth="200"/>
+                        <Button fx:id="contactsButton" mnemonicParsing="false"  onMouseClicked="#onContactsButtonClicked"
+                                text="%contacts" styleClass="flagButton" alignment="CENTER_LEFT" minWidth="200"/>
+                    </VBox>
+                </VBox>
+            </top>
+            <bottom>
+                <HBox maxWidth="400" maxHeight="500" minHeight="120" styleClass="PopUpsBackground" alignment="CENTER"
+                      BorderPane.alignment="CENTER">
+                    <HBox fx:id="gameControlMenuBox" alignment="CENTER" pickOnBounds="false"/>
+                </HBox>
+            </bottom>
+        </BorderPane>
+    </AnchorPane>
+</StackPane>

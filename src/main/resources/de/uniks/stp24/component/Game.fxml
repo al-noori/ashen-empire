@@ -1,0 +1,12 @@
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="de.uniks.stp24.component.GameComponent"
+         prefHeight="50.0" prefWidth="600.0" spacing="15.0">
+    <Text fx:id="nameText"/>
+    <Text fx:id="numberOfPlayersText"/>
+    <Text fx:id="hostText"/>
+</fx:root>

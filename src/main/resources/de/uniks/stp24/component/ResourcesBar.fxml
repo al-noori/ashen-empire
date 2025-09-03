@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root alignment="CENTER" type="VBox" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.ResourcesBarComponent">
+    <HBox styleClass="resourceBar">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesText" text="%resources" />
+        <ImageView fx:id="creditsImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/credits.png" />
+        </ImageView>
+        <Text fx:id="credits" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="populationImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/population.png" />
+        </ImageView>
+        <Text fx:id="population" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="energyImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/energy.png" />
+        </ImageView>
+        <Text fx:id="energy" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="mineralsImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/minerals.png" />
+        </ImageView>
+        <Text fx:id="minerals" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="foodImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/food.png" />
+        </ImageView>
+        <Text fx:id="food" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="fuelImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/fuel.png" />
+        </ImageView>
+        <Text fx:id="fuel" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="researchImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/research.png" />
+        </ImageView>
+        <Text fx:id="research" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="alloysImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/alloys.png" />
+        </ImageView>
+        <Text fx:id="alloys" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+        <ImageView fx:id="consumer_goodsImg" fitHeight="40.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../icons/resources/consumer_goods.png" />
+        </ImageView>
+        <Text fx:id="consumer_goods" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="resourcesCountText" text="NaN (NaN)">
+            <HBox.margin>
+                <Insets top="10.0" />
+            </HBox.margin>
+        </Text>
+    </HBox>
+</fx:root>

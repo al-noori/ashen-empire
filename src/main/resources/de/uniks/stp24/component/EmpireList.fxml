@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root alignment="CENTER_LEFT" spacing="15.0" type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.EmpireListComponent">
+   <styleClass>
+      <String fx:value="yellow-text-small" />
+   </styleClass>
+   <HBox alignment="CENTER">
+   <children>
+         <VBox alignment="CENTER" styleClass="PopUpsBackground">
+            <children>
+            <ImageView fx:id="empireImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin></ImageView>
+            </children>
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+         </VBox>
+         <VBox alignment="CENTER_LEFT" spacing="20.0">
+            <children>
+            <Text fx:id="empireNo" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="Text" wrappingWidth="230.0">
+                  <VBox.margin>
+                     <Insets />
+                  </VBox.margin></Text>
+               <Text fx:id="warDefText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="Text" wrappingWidth="230.0" />
+            </children>
+         </VBox>
+      <VBox alignment="CENTER_LEFT">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="economyImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="economyText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="Text" wrappingWidth="150.0">
+                        <HBox.margin>
+                           <Insets left="20.0" />
+                        </HBox.margin></Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="militaryImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="militaryText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="Text" wrappingWidth="150.0">
+                        <HBox.margin>
+                           <Insets left="20.0" />
+                        </HBox.margin></Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <ImageView fx:id="techImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                  <Text fx:id="techText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="Text" wrappingWidth="150.0">
+                        <HBox.margin>
+                           <Insets left="20.0" />
+                        </HBox.margin></Text>
+               </children>
+            </HBox>
+         </children>
+            <HBox.margin>
+               <Insets right="50.0" />
+            </HBox.margin>
+      </VBox>
+      <ImageView fx:id="warImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <HBox.margin>
+               <Insets left="50.0" />
+            </HBox.margin></ImageView>
+   </children>
+</HBox>
+</fx:root>

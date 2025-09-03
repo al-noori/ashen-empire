@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="240.0" type="HBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.TankTransferListEntryComponent">
+   <CheckBox fx:id="selectedTank" mnemonicParsing="false">
+      <HBox.margin>
+         <Insets left="5.0" top="10.0" />
+      </HBox.margin>
+   </CheckBox>
+    <HBox HBox.hgrow="ALWAYS">
+        <VBox prefHeight="40.0" prefWidth="76.0">
+            <HBox prefHeight="28.0" prefWidth="56.0">
+                <VBox.margin>
+                    <Insets top="12.0" />
+                </VBox.margin>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../ships/tank_icon_green.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </ImageView>
+                <Text fx:id="tankNumber" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="3.0" />
+                    </HBox.margin>
+                </Text>
+            </HBox>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <HBox>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/hp.png" />
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+                </ImageView>
+                <Text fx:id="healthNumber" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                </Text>
+                <VBox.margin>
+                    <Insets top="12.0" />
+                </VBox.margin>
+            </HBox>
+        </VBox>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <HBox>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@../icons/exp_icon.png" />
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+                </ImageView>
+                <Text fx:id="experienceNumber" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="smallText">
+                    <font>
+                        <Font size="8.0" />
+                    </font>
+                </Text>
+                <VBox.margin>
+                    <Insets top="12.0" />
+                </VBox.margin>
+            </HBox>
+        </VBox>
+    </HBox>
+</fx:root>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root prefHeight="500.0" prefWidth="700.0"  type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.TraitsComponent">
+    <BorderPane layoutX="58.0" layoutY="53.0" prefHeight="394.0" prefWidth="573.0" styleClass="traits" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="58.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="53.0">
+        <top>
+            <VBox prefHeight="66.0" prefWidth="613.0" spacing="10" BorderPane.alignment="CENTER">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10"/>
+                </padding>
+                <Text fx:id="traitPointsText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;"
+                      styleClass="traitsText" text="Trait-Points (TP): "/>
+                <Text fx:id="selectedTraitsText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: white;"
+                      styleClass="traitsText" text="Selected Traits: "/>
+            </VBox>
+        </top>
+        <bottom>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="saveTraitsButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#save" styleClass="primary-button" text="%save">
+                    <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" />
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </bottom>
+        <center>
+            <VBox alignment="CENTER" spacing="20.0">
+                <GridPane fx:id="gridPaneTinyCards" hgap="20.0" vgap="20.0">
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="10" />
+                    </padding>
+                </GridPane>
+            </VBox>
+        </center>
+      <left>
+         <HBox prefHeight="275.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      </left>
+      <right>
+         <HBox prefHeight="275.0" prefWidth="60.0" BorderPane.alignment="CENTER" />
+      </right>
+    </BorderPane>
+</fx:root>

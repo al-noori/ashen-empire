@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" type="VBox"
+      fx:controller="de.uniks.stp24.component.EffectSourceComponent">
+   <Label styleClass="yellow-text-small" fx:id="effectName"/>
+   <VBox fx:id="effectsContainer"/>
+</fx:root>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.controller.LicensesController">
+   <center>
+      <HBox alignment="BOTTOM_CENTER" minHeight="300.0" minWidth="500.0" spacing="70.0" BorderPane.alignment="CENTER">
+         <VBox spacing="10.0" styleClass="PopUpsBackground">
+            <padding>
+               <Insets left="25.0" top="25.0"/>
+            </padding>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="%licenses"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Retrofit (Apache-Lizenz 2.0)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Dagger (Apache-Lizenz 2.0)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="RxJava (Apache-Lizenz 2.0)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="fulibFx (MIT_Lizenz)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="fulib (MIT_Lizenz)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="JavaFx (PL mit Classpath-Ausnahme, Oracle Lizenz))"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="ControlsFx (BSD 3-Klausel-Lizenz)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="JUnit (Eclipse Public License)"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Mockito (MIT-Lizenz))"/>
+         </VBox>
+         <VBox spacing="10.0" styleClass="PopUpsBackground">
+            <padding>
+               <Insets left="25.0" top="25.0"/>
+            </padding>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="Credits"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Dead Birds Society"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Quintessence Solutions GmbH"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Ahmad Lowejatan Noori"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Daniel Engelmann"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="David Hofmann"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Nadira Ćurić"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Nicole Buschin"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Johannes Hart"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText"  text="Parsa Keshavarz"/>
+         </VBox>
+         <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButtonClicked" prefHeight="40.0" prefWidth="105.0" styleClass="primary-button" text="%back">
+            <opaqueInsets>
+               <Insets bottom="5.0" right="5.0"/>
+            </opaqueInsets>
+            <HBox.margin>
+               <Insets bottom="5.0"/>
+            </HBox.margin>
+         </Button>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

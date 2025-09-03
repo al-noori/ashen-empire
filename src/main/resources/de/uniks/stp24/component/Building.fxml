@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root alignment="CENTER" type="HBox" xmlns="http://javafx.com/javafx/21.0.1"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.BuildingComponent"
+         HBox.Hgrow="ALWAYS">
+   <styleClass>
+      <String fx:value="yellow-text-small" />
+   </styleClass>
+   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="green-border">
+      <HBox.margin>
+         <Insets bottom="20.0" left="20.0" top="20.0" />
+      </HBox.margin>
+      <ImageView fx:id="buildingImage" fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+   </HBox>
+   <VBox HBox.hgrow="ALWAYS" alignment="CENTER">
+      <Label fx:id="buildingNameLabel" contentDisplay="CENTER" styleClass="yellow-text" text="%building.name">
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin></Label>
+      <HBox spacing="10" alignment="CENTER">
+         <VBox alignment="CENTER" spacing="5">
+            <Label fx:id="costLabel" styleClass="yellow-text-small" text="%cost" />
+            <HBox fx:id="costsBox" alignment="CENTER" />
+         </VBox>
+         <VBox alignment="CENTER" spacing="5">
+            <Label fx:id="productionLabel" styleClass="yellow-text-small" text="%production" />
+            <HBox fx:id="productionBox" alignment="CENTER" />
+         </VBox>
+         <VBox alignment="CENTER" spacing="5">
+            <Label fx:id="upkeepLabel" styleClass="yellow-text-small" text="%upkeep" />
+            <HBox fx:id="upkeepBox" alignment="CENTER" />
+         </VBox>
+      </HBox>
+   </VBox>
+</fx:root>

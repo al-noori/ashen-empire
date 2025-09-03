@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Text?>
+
+<fx:root alignment="CENTER" type="VBox" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.component.FleetListComponent">
+    <VBox alignment="CENTER" styleClass="systemListView">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="mediumText" text="%fleetList.name" />
+        <ListView fx:id="fleetList" onMouseClicked="#onItemClicked" styleClass="systemListView" VBox.vgrow="ALWAYS" />
+      <VBox.margin>
+         <Insets left="3.0" right="3.0" top="3.0" />
+      </VBox.margin>
+    </VBox>
+    <StackPane styleClass="planFleet">
+        <Polygon fill="#273328" points="-172.0, -90.0, 65.0, -90.0, -49.0, -36.0" stroke="BLACK" strokeType="INSIDE" styleClass="planFleetPoly" />
+        <Button mnemonicParsing="false" onAction="#planNewFleet" styleClass="planFleetButton" text="%fleetList.planNewFleet" translateY="-17.0" />
+    </StackPane>
+</fx:root>

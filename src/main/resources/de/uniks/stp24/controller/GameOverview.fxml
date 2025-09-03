@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="724.0" prefWidth="1148.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.uniks.stp24.controller.GameOverviewController">
+   <bottom>
+       <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </BorderPane.margin>
+       </HBox>
+   </bottom>
+   <right>
+       <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefHeight="787.0" prefWidth="177.0" BorderPane.alignment="CENTER">
+           <HBox alignment="CENTER" prefHeight="55.0" prefWidth="177.0" styleClass="PopUpsBackground">
+               <VBox.margin>
+                   <Insets />
+               </VBox.margin>
+               <Button fx:id="achievementsButton" mnemonicParsing="false" onMouseClicked="#achievementsButton" prefHeight="45.0" prefWidth="191.0" styleClass="mediumButton" text="%achievements">
+                   <HBox.margin>
+                       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                   </HBox.margin>
+               </Button>
+           </HBox>
+         <HBox prefHeight="231.0" prefWidth="213.0" />
+           <VBox alignment="CENTER" styleClass="PopUpsBackground">
+               <Button fx:id="createEmpireButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#createEmpireButton" prefHeight="83.0" prefWidth="167.0" styleClass="mediumButton" text="%create.empire" textAlignment="CENTER" wrapText="true">
+                   <VBox.margin>
+                       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                   </VBox.margin>
+               </Button>
+               <Button fx:id="chooseEmpireButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#chooseEmpireButton" prefHeight="102.0" prefWidth="187.0" styleClass="mediumButton" text="%choose.empire" textAlignment="CENTER" wrapText="true">
+                   <VBox.margin>
+                       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                   </VBox.margin>
+               </Button>
+           </VBox>
+         <HBox prefHeight="131.0" prefWidth="177.0" />
+           <HBox alignment="CENTER" styleClass="PopUpsBackground">
+               <Button fx:id="leaveGameButton" mnemonicParsing="false" onMouseClicked="#leaveGameButton" styleClass="mediumButton" text="%leave.the.game" textAlignment="CENTER" wrapText="true">
+                   <HBox.margin>
+                       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                   </HBox.margin>
+             </Button>
+           </HBox>
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+       </VBox>
+   </right>
+   <top>
+       <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="474.0" BorderPane.alignment="CENTER">
+         <HBox alignment="CENTER" styleClass="PopUpsBackground">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </HBox>
+       </HBox>
+   </top>
+   <left>
+       <VBox alignment="TOP_CENTER" maxWidth="-Infinity" prefHeight="681.0" prefWidth="635.0" BorderPane.alignment="CENTER">
+           <BorderPane.margin>
+               <Insets />
+           </BorderPane.margin>
+           <VBox alignment="CENTER" prefHeight="615.0" prefWidth="615.0" styleClass="PopUpsBackground">
+               <VBox.margin>
+                   <Insets left="20.0" />
+               </VBox.margin>
+               <VBox>
+                   <VBox.margin>
+                       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                   </VBox.margin>
+                   <HBox prefHeight="52.0" prefWidth="573.0">
+                       <HBox alignment="CENTER" prefHeight="30.0" prefWidth="290.0" styleClass="fullOpacityContainer">
+                           <Label styleClass="mediumText" text="%players" />
+                       </HBox>
+                       <HBox alignment="CENTER" prefHeight="30.0" prefWidth="293.0" styleClass="fullOpacityContainer">
+                           <Label styleClass="mediumText" text="%status1" />
+                       </HBox>
+                   </HBox>
+                   <ListView fx:id="playerBox" maxWidth="-Infinity" onMouseClicked="#onPlayerBoxClicked" prefHeight="409.0" prefWidth="573.0" styleClass="primary-list-view" />
+               </VBox>
+               <Button fx:id="removePlayerButton" mnemonicParsing="false" onMouseClicked="#removePlayerButton" text="%remove.player" textAlignment="CENTER" wrapText="true">
+                   <styleClass>
+                       <String fx:value="mediumButton" />
+                   </styleClass>
+                   <VBox.margin>
+                       <Insets bottom="30.0" right="20.0" />
+                   </VBox.margin>
+               </Button>
+           </VBox>
+           <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="113.0" prefWidth="409.0" />
+           <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="195.0" prefWidth="708.0">
+               <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" styleClass="PopUpsBackground">
+                   <HBox.margin>
+                       <Insets left="20.0" />
+                   </HBox.margin>
+                   <Button fx:id="startGameButton" mnemonicParsing="false" onMouseClicked="#startGameButton" styleClass="mediumButton" text="%start">
+                       <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                       </VBox.margin>
+                   </Button>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               </VBox>
+           </HBox>
+       </VBox>
+   </left>
+</BorderPane>

@@ -1,0 +1,1135 @@
+- c: 	org.fulib.classmodel.ClassModel
+  classes: 	war 	empire 	ship 	fleet 	fraction 	jobs 	technology 	user 	game
+  defaultCollectionType: 	c1
+  defaultPropertyStyle: 	Bean
+  defaultRoleType: 	"java.util.ArrayList<%s>"
+  mainJavaDir: 	"src/main/java"
+  packageName: 	de.uniks.stp24.model.game
+  packageSrcFolder: 	"src/main/java/de/uniks/stp24/model/game"
+
+- war: 	org.fulib.classmodel.Clazz
+  attributes: 	war_createdAt 	war_updatedAt 	war__id 	war_name
+  model: 	c
+  modified: 	false
+  name: 	War
+  propertyStyle: 	Bean
+  roles: 	war_defender 	war_attacker
+
+- empire: 	org.fulib.classmodel.Clazz
+  attributes: 	empire__id 	empire_name 	empire_description 	empire_color 	empire_flag 	empire_portrait 	empire_traits 	empire_createdAt 	empire_updatedAt 	empire_resources
+  model: 	c
+  modified: 	false
+  name: 	Empire
+  propertyStyle: 	Bean
+  roles: 	empire_defendingWars 	empire_attackingWars 	empire_ships 	empire_fleets 	empire_technologies 	empire_jobs 	empire_owner 	empire_fractions 	empire_homeSystem
+
+- ship: 	org.fulib.classmodel.Clazz
+  attributes: 	ship_createdAt 	ship_updatedAt 	ship__id 	ship_type 	ship_health 	ship_experience
+  model: 	c
+  modified: 	false
+  name: 	Ship
+  propertyStyle: 	Bean
+  roles: 	ship_empire 	ship_fleet
+
+- fleet: 	org.fulib.classmodel.Clazz
+  attributes: 	fleet_createdAt 	fleet_updatedAt 	fleet__id 	fleet_name 	fleet_size
+  model: 	c
+  modified: 	false
+  name: 	Fleet
+  propertyStyle: 	Bean
+  roles: 	fleet_ships 	fleet_empire 	fleet_location 	fleet_moving
+
+- fraction: 	org.fulib.classmodel.Clazz
+  attributes: 	fraction_createdAt 	fraction_updatedAt 	fraction__id 	fraction_name 	fraction_capacity 	fraction_upgrade 	fraction_population 	fraction_x 	fraction_y 	fraction_buildings 	fraction_districts 	fraction_districtSlots 	fraction_type 	fraction_health
+  model: 	c
+  modified: 	false
+  name: 	Fraction
+  propertyStyle: 	Bean
+  roles: 	fraction_fleets 	fraction_jobs 	fraction_currentTraveling 	fraction_empire 	fraction_homeEmpire 	fraction_game 	fraction_links
+
+- jobs: 	org.fulib.classmodel.Clazz
+  attributes: 	jobs_createdAt 	jobs_updatedAt 	jobs__id 	jobs_progress 	jobs_total 	jobs_priority 	jobs_type 	jobs_building 	jobs_district 	jobs_technology 	jobs_ship 	jobs_cost 	jobs_result
+  model: 	c
+  modified: 	false
+  name: 	Jobs
+  propertyStyle: 	Bean
+  roles: 	jobs_fleet 	jobs_empire 	jobs_fraction 	jobs_path
+
+- technology: 	org.fulib.classmodel.Clazz
+  attributes: 	technology_createdAt 	technology_updatedAt 	technology__id 	technology_cost 	technology_requires 	technology_precedes 	technology_tags
+  model: 	c
+  modified: 	false
+  name: 	Technology
+  propertyStyle: 	Bean
+  roles: 	technology_empire
+
+- user: 	org.fulib.classmodel.Clazz
+  attributes: 	user__id 	user_name 	user_createdAt 	user_updatedAt 	user_ready
+  model: 	c
+  modified: 	false
+  name: 	User
+  propertyStyle: 	Bean
+  roles: 	user_empire 	user_game
+
+- game: 	org.fulib.classmodel.Clazz
+  attributes: 	game_createdAt 	game_updatedAt 	game_id 	game_owner 	game_name 	game_started 	game_speed 	game_period 	game_size 	game_playersCount 	game_maxPlayers
+  model: 	c
+  modified: 	false
+  name: 	Game
+  propertyStyle: 	Bean
+  roles: 	game_members 	game_fractions
+
+- c1: 	org.fulib.classmodel.CollectionType
+  implClass: 	class java.util.ArrayList
+  implTemplate: 	"java.util.ArrayList<%s>"
+  itf: 	org.fulib.classmodel.CollectionInterface.List
+  qualifiedImplName: 	java.util.ArrayList
+  simpleImplName: 	ArrayList
+
+- war_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	war
+  id: 	War_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- war_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	war
+  id: 	War_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- war__id: 	org.fulib.classmodel.Attribute
+  clazz: 	war
+  id: 	War__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- war_name: 	org.fulib.classmodel.Attribute
+  clazz: 	war
+  id: 	War_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- war_defender: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	war
+  id: 	War_defender
+  modified: 	false
+  name: 	defender
+  other: 	empire_defendingWars
+  propertyStyle: 	Bean
+
+- war_attacker: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	war
+  id: 	War_attacker
+  modified: 	false
+  name: 	attacker
+  other: 	empire_attackingWars
+  propertyStyle: 	Bean
+
+- empire__id: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- empire_name: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- empire_description: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_description
+  modified: 	false
+  name: 	description
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- empire_color: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_color
+  modified: 	false
+  name: 	color
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- empire_flag: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_flag
+  modified: 	false
+  name: 	flag
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- empire_portrait: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_portrait
+  modified: 	false
+  name: 	portrait
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- empire_traits: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_traits
+  modified: 	false
+  name: 	traits
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- empire_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- empire_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- empire_resources: 	org.fulib.classmodel.Attribute
+  clazz: 	empire
+  id: 	Empire_resources
+  modified: 	false
+  name: 	resources
+  propertyStyle: 	Bean
+  type: 	"import(java.util.Map)<String, Integer>"
+  typeSignature: 	"Map<String,Integer>"
+
+- empire_defendingWars: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_defendingWars
+  modified: 	false
+  name: 	defendingWars
+  other: 	war_defender
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_attackingWars: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_attackingWars
+  modified: 	false
+  name: 	attackingWars
+  other: 	war_attacker
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_ships: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_ships
+  modified: 	false
+  name: 	ships
+  other: 	ship_empire
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_fleets: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_fleets
+  modified: 	false
+  name: 	fleets
+  other: 	fleet_empire
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_technologies: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_technologies
+  modified: 	false
+  name: 	technologies
+  other: 	technology_empire
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_jobs: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_jobs
+  modified: 	false
+  name: 	jobs
+  other: 	jobs_empire
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_owner: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	empire
+  id: 	Empire_owner
+  modified: 	false
+  name: 	owner
+  other: 	user_empire
+  propertyStyle: 	Bean
+
+- empire_fractions: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	empire
+  collectionType: 	c3
+  id: 	Empire_fractions
+  modified: 	false
+  name: 	fractions
+  other: 	fraction_empire
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- empire_homeSystem: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	empire
+  id: 	Empire_homeSystem
+  modified: 	false
+  name: 	homeSystem
+  other: 	fraction_homeEmpire
+  propertyStyle: 	Bean
+
+- ship_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	ship
+  id: 	Ship_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- ship_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	ship
+  id: 	Ship_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- ship__id: 	org.fulib.classmodel.Attribute
+  clazz: 	ship
+  id: 	Ship__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- ship_type: 	org.fulib.classmodel.Attribute
+  clazz: 	ship
+  id: 	Ship_type
+  modified: 	false
+  name: 	type
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- ship_health: 	org.fulib.classmodel.Attribute
+  clazz: 	ship
+  id: 	Ship_health
+  modified: 	false
+  name: 	health
+  propertyStyle: 	Bean
+  type: 	Integer
+  typeSignature: 	Integer
+
+- ship_experience: 	org.fulib.classmodel.Attribute
+  clazz: 	ship
+  id: 	Ship_experience
+  modified: 	false
+  name: 	experience
+  propertyStyle: 	Bean
+  type: 	Integer
+  typeSignature: 	Integer
+
+- ship_empire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	ship
+  id: 	Ship_empire
+  modified: 	false
+  name: 	empire
+  other: 	empire_ships
+  propertyStyle: 	Bean
+
+- ship_fleet: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	ship
+  id: 	Ship_fleet
+  modified: 	false
+  name: 	fleet
+  other: 	fleet_ships
+  propertyStyle: 	Bean
+
+- fleet_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	fleet
+  id: 	Fleet_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- fleet_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	fleet
+  id: 	Fleet_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- fleet__id: 	org.fulib.classmodel.Attribute
+  clazz: 	fleet
+  id: 	Fleet__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fleet_name: 	org.fulib.classmodel.Attribute
+  clazz: 	fleet
+  id: 	Fleet_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fleet_size: 	org.fulib.classmodel.Attribute
+  clazz: 	fleet
+  id: 	Fleet_size
+  modified: 	false
+  name: 	size
+  propertyStyle: 	Bean
+  type: 	"import(java.util.Map)<String, Integer>"
+  typeSignature: 	"Map<String,Integer>"
+
+- fleet_ships: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	fleet
+  collectionType: 	c3
+  id: 	Fleet_ships
+  modified: 	false
+  name: 	ships
+  other: 	ship_fleet
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- fleet_empire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	fleet
+  id: 	Fleet_empire
+  modified: 	false
+  name: 	empire
+  other: 	empire_fleets
+  propertyStyle: 	Bean
+
+- fleet_location: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	fleet
+  id: 	Fleet_location
+  modified: 	false
+  name: 	location
+  other: 	fraction_fleets
+  propertyStyle: 	Bean
+
+- fleet_moving: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	fleet
+  id: 	Fleet_moving
+  modified: 	false
+  name: 	moving
+  other: 	jobs_fleet
+  propertyStyle: 	Bean
+
+- fraction_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- fraction_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- fraction__id: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fraction_name: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fraction_capacity: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_capacity
+  modified: 	false
+  name: 	capacity
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- fraction_upgrade: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_upgrade
+  modified: 	false
+  name: 	upgrade
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fraction_population: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_population
+  modified: 	false
+  name: 	population
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- fraction_x: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_x
+  modified: 	false
+  name: 	x
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- fraction_y: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_y
+  modified: 	false
+  name: 	y
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- fraction_buildings: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  collectionType: 	c3
+  id: 	Fraction_buildings
+  modified: 	false
+  name: 	buildings
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fraction_districts: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_districts
+  modified: 	false
+  name: 	districts
+  propertyStyle: 	Bean
+  type: 	"import(java.util.Map)<String, Integer>"
+  typeSignature: 	"Map<String,Integer>"
+
+- fraction_districtSlots: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_districtSlots
+  modified: 	false
+  name: 	districtSlots
+  propertyStyle: 	Bean
+  type: 	"import(java.util.Map)<String, Integer>"
+  typeSignature: 	"Map<String,Integer>"
+
+- fraction_type: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_type
+  modified: 	false
+  name: 	type
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- fraction_health: 	org.fulib.classmodel.Attribute
+  clazz: 	fraction
+  id: 	Fraction_health
+  modified: 	false
+  name: 	health
+  propertyStyle: 	Bean
+  type: 	Integer
+  typeSignature: 	Integer
+
+- fraction_fleets: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	fraction
+  collectionType: 	c3
+  id: 	Fraction_fleets
+  modified: 	false
+  name: 	fleets
+  other: 	fleet_location
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- fraction_jobs: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	fraction
+  collectionType: 	c3
+  id: 	Fraction_jobs
+  modified: 	false
+  name: 	jobs
+  other: 	jobs_fraction
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- fraction_currentTraveling: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	fraction
+  collectionType: 	c3
+  id: 	Fraction_currentTraveling
+  modified: 	false
+  name: 	currentTraveling
+  other: 	jobs_path
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- fraction_empire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	fraction
+  id: 	Fraction_empire
+  modified: 	false
+  name: 	empire
+  other: 	empire_fractions
+  propertyStyle: 	Bean
+
+- fraction_homeEmpire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	fraction
+  id: 	Fraction_homeEmpire
+  modified: 	false
+  name: 	homeEmpire
+  other: 	empire_homeSystem
+  propertyStyle: 	Bean
+
+- fraction_game: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	fraction
+  id: 	Fraction_game
+  modified: 	false
+  name: 	game
+  other: 	game_fractions
+  propertyStyle: 	Bean
+
+- fraction_links: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	fraction
+  collectionType: 	c3
+  id: 	Fraction_links
+  modified: 	false
+  name: 	links
+  other: 	fraction_links
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- jobs_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- jobs_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- jobs__id: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- jobs_progress: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_progress
+  modified: 	false
+  name: 	progress
+  propertyStyle: 	Bean
+  type: 	double
+  typeSignature: 	double
+
+- jobs_total: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_total
+  modified: 	false
+  name: 	total
+  propertyStyle: 	Bean
+  type: 	double
+  typeSignature: 	double
+
+- jobs_priority: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_priority
+  modified: 	false
+  name: 	priority
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- jobs_type: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_type
+  modified: 	false
+  name: 	type
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- jobs_building: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_building
+  modified: 	false
+  name: 	building
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- jobs_district: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_district
+  modified: 	false
+  name: 	district
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- jobs_technology: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_technology
+  modified: 	false
+  name: 	technology
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- jobs_ship: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_ship
+  modified: 	false
+  name: 	ship
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- jobs_cost: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_cost
+  modified: 	false
+  name: 	cost
+  propertyStyle: 	Bean
+  type: 	"import(java.util.Map)<String, Integer>"
+  typeSignature: 	"Map<String,Integer>"
+
+- jobs_result: 	org.fulib.classmodel.Attribute
+  clazz: 	jobs
+  id: 	Jobs_result
+  modified: 	false
+  name: 	result
+  propertyStyle: 	Bean
+  type: 	de.uniks.stp24.dto.ResultDto
+  typeSignature: 	de.uniks.stp24.dto.ResultDto
+
+- jobs_fleet: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	jobs
+  id: 	Jobs_fleet
+  modified: 	false
+  name: 	fleet
+  other: 	fleet_moving
+  propertyStyle: 	Bean
+
+- jobs_empire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	jobs
+  id: 	Jobs_empire
+  modified: 	false
+  name: 	empire
+  other: 	empire_jobs
+  propertyStyle: 	Bean
+
+- jobs_fraction: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	jobs
+  id: 	Jobs_fraction
+  modified: 	false
+  name: 	fraction
+  other: 	fraction_jobs
+  propertyStyle: 	Bean
+
+- jobs_path: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	jobs
+  collectionType: 	c3
+  id: 	Jobs_path
+  modified: 	false
+  name: 	path
+  other: 	fraction_currentTraveling
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- technology_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  id: 	Technology_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- technology_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  id: 	Technology_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- technology__id: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  id: 	Technology__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- technology_cost: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  id: 	Technology_cost
+  modified: 	false
+  name: 	cost
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- technology_requires: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  collectionType: 	c3
+  id: 	Technology_requires
+  modified: 	false
+  name: 	requires
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- technology_precedes: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  collectionType: 	c3
+  id: 	Technology_precedes
+  modified: 	false
+  name: 	precedes
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- technology_tags: 	org.fulib.classmodel.Attribute
+  clazz: 	technology
+  collectionType: 	c3
+  id: 	Technology_tags
+  modified: 	false
+  name: 	tags
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- technology_empire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	technology
+  id: 	Technology_empire
+  modified: 	false
+  name: 	empire
+  other: 	empire_technologies
+  propertyStyle: 	Bean
+
+- user__id: 	org.fulib.classmodel.Attribute
+  clazz: 	user
+  id: 	User__id
+  modified: 	false
+  name: 	_id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- user_name: 	org.fulib.classmodel.Attribute
+  clazz: 	user
+  id: 	User_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- user_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	user
+  id: 	User_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- user_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	user
+  id: 	User_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- user_ready: 	org.fulib.classmodel.Attribute
+  clazz: 	user
+  id: 	User_ready
+  modified: 	false
+  name: 	ready
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- user_empire: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	user
+  id: 	User_empire
+  modified: 	false
+  name: 	empire
+  other: 	empire_owner
+  propertyStyle: 	Bean
+
+- user_game: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	1
+  clazz: 	user
+  id: 	User_game
+  modified: 	false
+  name: 	game
+  other: 	game_members
+  propertyStyle: 	Bean
+
+- game_createdAt: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_createdAt
+  modified: 	false
+  name: 	createdAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- game_updatedAt: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_updatedAt
+  modified: 	false
+  name: 	updatedAt
+  propertyStyle: 	Bean
+  type: 	"import(java.time.LocalDateTime)"
+  typeSignature: 	LocalDateTime
+
+- game_id: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_id
+  modified: 	false
+  name: 	id
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- game_owner: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_owner
+  modified: 	false
+  name: 	owner
+  propertyStyle: 	Bean
+  type: 	User
+  typeSignature: 	User
+
+- game_name: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_name
+  modified: 	false
+  name: 	name
+  propertyStyle: 	Bean
+  type: 	String
+  typeSignature: 	String
+
+- game_started: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_started
+  modified: 	false
+  name: 	started
+  propertyStyle: 	Bean
+  type: 	boolean
+  typeSignature: 	boolean
+
+- game_speed: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_speed
+  modified: 	false
+  name: 	speed
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- game_period: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_period
+  modified: 	false
+  name: 	period
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- game_size: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_size
+  modified: 	false
+  name: 	size
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- game_playersCount: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_playersCount
+  modified: 	false
+  name: 	playersCount
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- game_maxPlayers: 	org.fulib.classmodel.Attribute
+  clazz: 	game
+  id: 	Game_maxPlayers
+  modified: 	false
+  name: 	maxPlayers
+  propertyStyle: 	Bean
+  type: 	int
+  typeSignature: 	int
+
+- game_members: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	game
+  collectionType: 	c3
+  id: 	Game_members
+  modified: 	false
+  name: 	members
+  other: 	user_game
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- game_fractions: 	org.fulib.classmodel.AssocRole
+  aggregation: 	false
+  cardinality: 	42
+  clazz: 	game
+  collectionType: 	c3
+  id: 	Game_fractions
+  modified: 	false
+  name: 	fractions
+  other: 	fraction_game
+  propertyStyle: 	Bean
+  roleType: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+
+- c3: 	org.fulib.classmodel.CollectionType
+  implClass: 	class java.util.concurrent.CopyOnWriteArrayList
+  implTemplate: 	"java.util.concurrent.CopyOnWriteArrayList<%s>"
+  itf: 	org.fulib.classmodel.CollectionInterface.List
+  qualifiedImplName: 	java.util.concurrent.CopyOnWriteArrayList
+  simpleImplName: 	CopyOnWriteArrayList
+
