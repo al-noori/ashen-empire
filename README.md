@@ -1,5 +1,5 @@
 # Ashen Empire
-A recreation of the game Stellaris with a focus on apocalyptic themes, specifically centered around a world ravaged by atomic warfare.
+A recreation of the game Stellaris with a focus on apocalyptic themes, specifically centered around a world ravaged by atomic warfare. See the trailer for a quick insight of the game.
 
 ## Description
 Welcome to **Ashen Empire**, a project inspired by the game Stellaris. This recreation aims to immerse players in a world where atomic warfare has reshaped civilizations and the very fabric of society. Explore a dynamic universe, make strategic decisions, and strive to survive and rebuild in this new, harsh reality.
