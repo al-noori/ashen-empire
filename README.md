@@ -18,6 +18,3 @@ To start playing Ashen Empire, follow these steps (will change soon):
    git clone https://github.com/yourusername/stellaris-apocalypse-atomwar.git
 2. Install Java 21 LTS
 3. Run the Project
-
-
-**Note**: This README is just a sample and will be updated soon to better reflect the details and scope of our project. Stay tuned for more information.
